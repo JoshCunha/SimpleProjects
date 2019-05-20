@@ -1,14 +1,18 @@
 def add(x, y):
     return x + y
 
+
 def subtract(x, y):
     return x - y
+
 
 def multiply(x, y):
     return x * y
 
+
 def divide(x, y):
     return x / y
+
 
 valid_operations = ['add',
                     'subtract',
@@ -25,16 +29,16 @@ while True:
     else:
         break
 
-numbers = input("Enter the two numbers to () seperated by space: ").format(operation)
+numbers = input("Enter the two numbers to (), seperated by space: ").format(operation)
 number_list = numbers.split(' ')
-num1 = int(number_list[0])
-num2 = int(number_list[1])
+input1 = int(number_list[0])
+input2 = int(number_list[1])
 
 if operation == "add":
-    print("{} + {} = {}".format(num1, num2, add(num1, num2)))
+    print("{} + {} = {}".format(input1, input2, add(input1, input2)))
 elif operation == "subtract":
-    print("{} - {} = {}".format(num1, num2, subtract(num1, num2)))
+    print("{} - {} = {}".format(input1, input2, subtract(input1, input2)))
 elif operation == "multiply":
-    print("{} * {} = {}".format(num1, num2, multiply(num1, num2)))
+    print("{} * {} = {}".format(input1, input2, multiply(input1, input2)))
 else:
-    print("{} / {} = {}".format(num1, num2, divide(num1, num2)))
+    print("{} / {} = {}".format(input1, input2, divide(input1, input2)))
